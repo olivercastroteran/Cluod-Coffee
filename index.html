@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries 
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script> -->
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./app.js"></script>
+
     <title>Cloud Store</title>
   </head>
   <body>
@@ -13,5 +20,25 @@
       <form id="add-cafe-form"></form>
       <ul id="cafe-list"></ul>
     </div>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyBPmFI8sMGp2oLjeu80KB5OWVafyjksVgg',
+        authDomain: 'cloud-coffee-firestore.firebaseapp.com',
+        databaseURL: 'https://cloud-coffee-firestore.firebaseio.com',
+        projectId: 'cloud-coffee-firestore',
+        storageBucket: 'cloud-coffee-firestore.appspot.com',
+        messagingSenderId: '148874851352',
+        appId: '1:148874851352:web:1d97903ed101504d13bf6d',
+        measurementId: 'G-ETZNERLZG2'
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //firebase.analytics();
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="./app.js"></script>
   </body>
 </html>
