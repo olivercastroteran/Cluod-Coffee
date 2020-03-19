@@ -1,2 +1,2 @@
 # Cluod-Coffee
-Coffee rating app - using Firebase Firestore
+Coffee database app - using Firebase Firestore
